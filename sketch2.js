@@ -2,6 +2,7 @@ var canvas;
 let coral;
 let bubbles=[];
 let bubble
+let ear = document.getElementById('ear');
 
 
 function preload() {
@@ -11,15 +12,15 @@ function preload() {
     console.log('loaded')
     img = loadImage('underwaterPanorama1.jpg');
     glitter = loadImage('outerspace.jpg');
-
+    soundFormats('mp3', 'ogg');
+    mySound = loadSound('xelononisos_xarmosino.mp3');
   }
 
 function setup(){
     let canvas= createCanvas(windowWidth,windowHeight,WEBGL);
     //textureMode(IMAGE);
     //textureWrap(MIRROR);
-
-
+   
    //ortho(-width, width, height, -height/2, 0.1, 100);
   }
 
@@ -48,39 +49,52 @@ texture(glitter);
 
 //let x=random(5);
 push();
-translate(-100,-200)
+translate(0,0);
+rotateY(frameCount * -0.1);
 model(coral);
 pop();
 
-
-    translate(200,200)
+push();
+    translate(200,-300);
+    rotateZ(frameCount * -0.3);
     model(coral);
+    pop();
 
-    translate(-200,-600)
+    push();
+    translate(-200,100);
+    rotateX(frameCount * -0.2);
 model(coral);
-    translate(200,200)
+pop();
+push();
+    translate(300,200);
+    rotateY(frameCount * 0.2);
     model(coral);
-    
-    translate(-500,-100)
+    pop();
+    push();
+    translate(-500,-100);
+    rotateZ(frameCount * 0.1);
     model(coral);
-    
-    translate(200,600)
+    pop();
+    push();
+    translate(-100,-400);
+    rotateX(frameCount * 0.2);
     model(coral);
-
-    translate(-500,-100)
+    pop();
+    push();
+    translate(450,-100);
+    rotateY(frameCount *-0.2);
     model(coral);
+    pop();
     
     // translate(200,500)
     // model(coral);
-
-    
-
-
-    
-
-
-
+ear.mousePressed();
   }
 
+  function mousePressed(){
+    mySound.setVolume(0.4);
+    mySound.play();
+    
+  }
 
   
