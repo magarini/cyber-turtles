@@ -43,52 +43,52 @@ function setup(){
 //shininess(10);
 orbitControl();
 rotateX(30);
-rotateX(frameCount * 0.1);
+rotateX(frameCount * 0.05);
 texture(glitter);
 //textureWrap(CLAMP);
 
 //let x=random(5);
 push();
 translate(0,0);
-rotateY(frameCount * -0.1);
+rotateY(frameCount * -0.01);
 model(coral);
 pop();
 
 push();
     translate(200,-300);
-    rotateZ(frameCount * -0.3);
+    rotateZ(frameCount * -0.03);
     model(coral);
     pop();
 
     push();
     translate(-200,100);
-    rotateX(frameCount * -0.2);
+    rotateX(frameCount * -0.02);
 model(coral);
 pop();
 push();
     translate(300,200);
-    rotateY(frameCount * 0.2);
+    rotateY(frameCount * 0.02);
     model(coral);
     pop();
     push();
     translate(-500,-100);
-    rotateZ(frameCount * 0.1);
+    rotateZ(frameCount * 0.01);
     model(coral);
     pop();
     push();
     translate(-100,-400);
-    rotateX(frameCount * 0.2);
+    rotateX(frameCount * 0.02);
     model(coral);
     pop();
     push();
     translate(450,-100);
-    rotateY(frameCount *-0.2);
+    rotateY(frameCount *-0.02);
     model(coral);
     pop();
     
     // translate(200,500)
     // model(coral);
-ear.mousePressed();
+// ear.mousePressed();
   }
 
   function mousePressed(){
