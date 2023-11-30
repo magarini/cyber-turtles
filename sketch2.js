@@ -88,3 +88,6 @@ push();
   }
 
   
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
